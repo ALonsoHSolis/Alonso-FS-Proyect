@@ -1,6 +1,0 @@
-#Archivos que se van a ignorar
-paginaEjemplo2.html
-#todos los archivos con esta extension los ignora
-*.psd
-#No se sube pq es muy pesada...
-node_modules

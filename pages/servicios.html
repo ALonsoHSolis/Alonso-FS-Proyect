@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">Pagina principal</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="./servicios.html">Servicios</a>
-                </li>
-                <li>
-                    <a href="./equipo.html">Equipo</a>
-                </li>
-                <li>
-                    <a href="./operacion_renta.html">Operacion renta</a>
-                </li>
-            </ul>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="../index.html">AH-RS</a>
+                </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="../index.html" class="navbar-link">Página principal</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./nosotros.html" class="navbar-link">Sobre nosotros</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./servicios.html" class="navbar-link">Servicios</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./equipo.html" class="navbar-link">Equipo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./operacion_renta.html" class="navbar-link">Operación renta</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Presentacion inicial y nuestros servicios-->
+    <!-- Presentación inicial y nuestros servicios-->
     <section id="bienvenida_imagen_header">
-        <img src="../assets/header.jpg" alt="imagen_header" class="imagen_header">
+        <img src="../assets/header.jpg" alt="imagen_header" class="imagen_header" data-aos="fade-down">
     </section>
     
     <div>
@@ -109,7 +115,7 @@
     <section class="service-section" id="auditoria">
         <div class="service-content">
             <div>
-                <h2>Auditorias</h2>
+                <h2>Auditorías</h2>
                 <p>                
                     Nos comprometemos a proporcionar confianza y seguridad en la información financiera, vital para la toma de decisiones empresariales. Nuestro enfoque de trabajo está dirigido a entregar información precisa y de alta calidad a nuestros clientes y al mercado, consolidándonos como referentes en auditoría y consultoría.
                     <br>
@@ -132,13 +138,36 @@
         </div>
     </section>
 
-    <footer id="foot">
-        <p>
-            Telefono: xxx xxx xxx
-            <br>
-            Correo: xxxxxx@gmail.com
-        </p>
+    <footer class="footer">
+        <div class="footer-container" data-aos="fade-down">
+            <div class="footer-about">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una firma de servicios contables y tributarios comprometidos con la excelencia y la integridad profesional. Nuestro objetivo es brindar soluciones personalizadas que se adapten a las necesidades de nuestros clientes.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: +56 9 1234 5678</p>
+                <p>Correo: contacto@tuservicio.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tu Servicio Contable-Tributario. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
+
 

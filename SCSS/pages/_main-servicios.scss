@@ -4,36 +4,109 @@
     padding: 20px;
     background: #2c3e50;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
     .service-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #1abc9c;
-        }
-
-        p {
-            font-size: 16px;
-            text-align: justify;
-            color: #d3d3d3;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-            border-radius: 8px;
-        }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+  
+      div {
+        flex: 1;
+      }
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #1abc9c;
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 5px;
+      }
+  
+      p {
+        font-size: 16px;
+        text-align: justify;
+        color: #d3d3d3;
+        line-height: 1.6;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
     }
-}
+  }
+  
+  /* Estilos para el footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      > div {
+        flex: 1;
+        margin: 20px;
+        min-width: 250px;
+      }
+    }
+  
+    h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #1abc9c;
+      border-bottom: 2px solid #1abc9c;
+      padding-bottom: 5px;
+    }
+  
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  
+    a {
+      color: #1abc9c;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+  
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  

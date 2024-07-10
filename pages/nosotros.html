@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
-
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">Pagina principal</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="./servicios.html">Servicios</a>
-                </li>   
-                <li>
-                    <a href="./equipo.html">Equipo</a>
-                </li>
-                <li>
-                    <a href="./operacion_renta.html">Operacion renta</a>
-                </li>        
-            </ul>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="../index.html">AH-RS</a>
+                </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="../index.html" class="navbar-link">Página principal</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./nosotros.html" class="navbar-link">Sobre nosotros</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./servicios.html" class="navbar-link">Servicios</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./equipo.html" class="navbar-link">Equipo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./operacion_renta.html" class="navbar-link">Operación renta</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <!-- Presentacion inicial y nuestros servicios-->
     <section id="bienvenida_imagen_header">
-        <img src="../assets/header.jpg" alt="imagen_header" class="imagen_header">
+        <img src="../assets/header.jpg" alt="imagen_header" class="imagen_header" data-aos="fade-down">
     </section>
 
     <!--SOBRE NOSOTROS-->
-    <section id="sobre_nosotros">
+    <section id="sobre_nosotros" data-aos="fade-up">
         <div class="section-content">
             <h2>Sobre nosotros</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae quia autem. Tempore adipisci facilis modi alias distinctio animi nam voluptatibus rerum nihil reprehenderit sint voluptate, vitae, nulla quas? Dolorem.</p>
@@ -45,7 +50,7 @@
     </section>
     
     <!--NUESTRO PROPOSITO-->
-    <section id="nuestro_proposito">
+    <section id="nuestro_proposito" data-aos="fade-up">
         <div class="section-content">
             <h2>Nuestro propósito</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex asperiores error fugiat sed corrupti illum autem, ut totam illo pariatur, natus magnam eum accusantium quae optio. Dolor, possimus cupiditate? Iure.</p>
@@ -56,26 +61,26 @@
     </section>
     
     <!--VALORES-->
-    <section id="valores">
+    <section id="valores" data-aos="fade-up">
         <div class="section-content">
             <h2>Valores</h2>
             <div class="section-content-valores">
-                <div class="valor">
+                <div class="valor" data-aos="flip-left">
                     <h3>Integredidad y Ética Profesional</h3>
                     <p>Descripción del valor 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto itaque voluptatem consequuntur, aspernatur ut alias sunt, aliquid totam facere quas officia. Delectus quis fugit dolorem blanditiis aliquid dolores, maxime repellat?</p>
                     <img src="../assets/Integridad y Ética Profesional.jfif" alt="Valor 1">
                 </div>
-                <div class="valor">
+                <div class="valor" data-aos="flip-right">
                     <h3>Calidad y precisión</h3>
                     <p>Descripción del valor 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ratione. Perferendis illo officiis accusantium non consequatur enim, deserunt odio est blanditiis pariatur minima ullam totam atque hic debitis, eligendi obcaecati.</p>
                     <img src="../assets/Calidad y precisión.jfif" alt="Valor 2">
                 </div>
-                <div class="valor">
+                <div class="valor" data-aos="flip-left">
                     <h3>Orientación al cliente</h3>
                     <p>Descripción del valor 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex impedit non quisquam autem at alias dolore velit quaerat, earum perferendis eligendi illo consequatur quae. Iste perferendis quaerat iusto laborum.</p>
                     <img src="../assets/Orientación al cliente.jpg" alt="Valor 3">
                 </div>
-                <div class="valor">
+                <div class="valor" data-aos="flip-right">
                     <h3>Innovación y Adaptabilidad</h3>
                     <p>Descripción del valor 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ipsa fugiat optio aut? Doloremque minus recusandae, quae labore rerum ab possimus, nesciunt quibusdam, quod eum veritatis ullam aspernatur incidunt odio.</p>
                     <img src="../assets/Innovación y Adaptabilidad.jfif" alt="Valor 4">
@@ -85,12 +90,35 @@
     </section>
 
     <!--Pie de pagina con nuestras redes sociales- contactos y links importante -->
-    <footer id="foot">
-        <p>
-            Telefono: xxx xxx xxx
-            <br>
-            Correo: xxxxxx@gmail.com
-        </p>
+    
+    <footer class="footer" >
+        <div class="footer-container" data-aos="fade-down">
+            <div class="footer-about">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una firma de servicios contables y tributarios comprometidos con la excelencia y la integridad profesional. Nuestro objetivo es brindar soluciones personalizadas que se adapten a las necesidades de nuestros clientes.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: +56 9 1234 5678</p>
+                <p>Correo: contacto@tuservicio.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tu Servicio Contable-Tributario. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

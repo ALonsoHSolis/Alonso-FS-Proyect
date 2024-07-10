@@ -1,30 +1,45 @@
-<!DOCTYPE html>  <!--La que define la versión y estructura del documento-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!--El tipo de simbolos que podes utilizar-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- compatibilidad con los navegadores viejitos-->
-    <title>ProyectoFS AHS</title> <!-- La que le da el nombre a la web en la pestaña-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoFS AHS</title>
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
 </head>
-<body> <!-- Todo lo que pongamos dentro del bodu es lo que vey -->
-
+<body>
     <header>
-        <nav id="navegador">
-            <ul>
-                <li><a href="./index.html" class="nav">Pagina principal</a></li>
-                <li><a href="./pages/nosotros.html" class="nav">Sobre nosotros</a></li>
-                <li><a href="./pages/servicios.html" class="nav">Servicios</a></li>
-                <li><a href="./pages/equipo.html" class="nav">Equipo</a></li>
-                <li><a href="./pages/operacion_renta.html" class="nav">Operación renta</a></li>
-            </ul>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="">AH-RS</a>
+                </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="../index.html" class="navbar-link">Página principal</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./pages/nosotros.html" class="navbar-link">Sobre nosotros</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./pages/servicios.html" class="navbar-link">Servicios</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./pages/equipo.html" class="navbar-link">Equipo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./pages/operacion_renta.html" class="navbar-link">Operación renta</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <section id="bienvenida_imagen_header">
-        <img src="./assets/header.jpg" alt="imagen_header" class="imagen_header">
+        <img src="./assets/header.jpg" alt="imagen_header" class="imagen_header" data-aos="fade-down">
     </section>
 
-    <section id="Bienvenida_index">
+    <section id="Bienvenida_index" data-aos="fade-up">
         <div>
             <h1>AH-RS Contadores & Auditores</h1>
         </div>
@@ -40,10 +55,10 @@
         </div>
     </section>
 
-    <section id="services">
+    <section id="services" data-aos="fade-down">
         <div class="service">
             <div class="service_description">
-                <h3>Servicios y Asesorias Contables</h3>
+                <h3>Servicios y Asesorías Contables</h3>
                 <p>Ofrecemos una gama completa de servicios y asesorías contables diseñados para garantizar la precisión y eficiencia en la gestión de tus finanzas. Desde la contabilidad general y la elaboración de estados financieros hasta la auditoría interna y la contabilidad de costos, nuestro objetivo es proporcionarte una visión clara y precisa de la situación financiera de tu empresa. Nuestros expertos contables te ayudan a mantener el cumplimiento normativo y a tomar decisiones informadas basadas en datos financieros precisos.</p>
             </div>
             <div class="service_image">
@@ -53,7 +68,7 @@
 
         <div class="service">
             <div class="service_description">
-                <h3>Servicios y Asesorias Tributarias</h3>
+                <h3>Servicios y Asesorías Tributarias</h3>
                 <p>Nuestros servicios y asesorías tributarias están diseñados para ayudarte a navegar el complejo panorama fiscal. Nos encargamos de la planificación y optimización fiscal, la preparación y presentación de declaraciones de impuestos, y la representación ante autoridades fiscales. Te ayudamos a maximizar tus beneficios fiscales mientras aseguras el cumplimiento con las regulaciones vigentes, reduciendo así el riesgo de sanciones y mejorando tu eficiencia fiscal.</p>
             </div>
             <div class="service_image">
@@ -63,7 +78,7 @@
 
         <div class="service">
             <div class="service_description">
-                <h3>Servicios y Asesorias Financieras</h3>
+                <h3>Servicios y Asesorías Financieras</h3>
                 <p>Brindamos servicios y asesorías financieras que abarcan desde la planificación financiera estratégica hasta la gestión de inversiones y el análisis de riesgos. Nuestro equipo de expertos financieros trabaja contigo para desarrollar estrategias que optimicen tus recursos, mejoren tu rentabilidad y aseguren la sostenibilidad a largo plazo de tu negocio. Ya sea que necesites asesoría en financiación, análisis de viabilidad de proyectos o gestión de tesorería, estamos aquí para apoyarte en cada paso del camino.</p>
             </div>
             <div class="service_image">
@@ -71,24 +86,35 @@
             </div>
         </div>
     </section>
-  
- <!--Pie de pagina con nuestras redes sociales- contactos y links importante -->
-    <footer id="foot">
-        <p>
-            Telefono: xxx xxx xxx
-            <br>
-            Correo: xxxxxx@gmail.com
-        </p>
 
-        
+    <footer class="footer">
+        <div class="footer-container" data-aos="fade-down">
+            <div class="footer-about">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una firma de servicios contables y tributarios comprometidos con la excelencia y la integridad profesional. Nuestro objetivo es brindar soluciones personalizadas que se adapten a las necesidades de nuestros clientes.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: +56 9 1234 5678</p>
+                <p>Correo: contacto@tuservicio.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tu Servicio Contable-Tributario. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <!--BR sirve como punto aparte-->
-    <!--  ./ desde el mismo nivel
-    ../ sale de un nivel hacia atrás-->
-    <!-- Enlaces absolutos-externos son los que nos redirecciones a web externas. Se usa comunmente para redirigerte a tus redes sociales. Tambien se usa comunmente en el footer-->
-    <!-- Enlaces relativos son los que nos redirecciones a un archivo dentro del proyecto.-->
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

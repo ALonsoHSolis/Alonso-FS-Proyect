@@ -11,30 +11,31 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="navbar-container">
-          <div class="navbar-logo">
-            <a href="../index.html">AH-RS</a>
+          <div class="navbar-container">
+              <div class="navbar-logo">
+                  <a href="">AH-RS</a>
+              </div>
+              <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
+              <ul class="navbar-menu" id="navbar-menu">
+                  <li class="navbar-item">
+                      <a href="../index.html" class="navbar-link">Página principal</a>
+                  </li>
+                  <li class="navbar-item">
+                      <a href="./nosotros.html" class="navbar-link">Sobre nosotros</a>
+                  </li>
+                  <li class="navbar-item">
+                      <a href="./servicios.html" class="navbar-link">Servicios</a>
+                  </li>
+                  <li class="navbar-item">
+                      <a href="./equipo.html" class="navbar-link">Equipo</a>
+                  </li>
+                  <li class="navbar-item">
+                      <a href="./operacion_renta.html" class="navbar-link">Operación renta</a>
+                  </li>
+              </ul>
           </div>
-          <ul class="navbar-menu">
-            <li class="navbar-item">
-              <a href="../index.html" class="navbar-link">Página principal</a>
-            </li>
-            <li class="navbar-item">
-              <a href="./nosotros.html" class="navbar-link">Sobre nosotros</a>
-            </li>
-            <li class="navbar-item">
-              <a href="./servicios.html" class="navbar-link">Servicios</a>
-            </li>
-            <li class="navbar-item">
-              <a href="./equipo.html" class="navbar-link">Equipo</a>
-            </li>
-            <li class="navbar-item">
-              <a href="./operacion_renta.html" class="navbar-link">Operación renta</a>
-            </li>
-          </ul>
-        </div>
       </nav>
-    </header>
+  </header>
 
     <!-- Presentacion inicial y nuestros servicios-->
     <section id="bienvenida_imagen_header">
@@ -132,6 +133,14 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      function toggleMenu() {
+          const menu = document.getElementById('navbar-menu');
+          menu.classList.toggle('open');
+      }
+  </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -12,9 +12,10 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <div class="navbar-logo">
-                    <a href="../index.html">AH-RS</a>
+                    <a href="">AH-RS</a>
                 </div>
-                <ul class="navbar-menu">
+                <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="navbar-menu" id="navbar-menu">
                     <li class="navbar-item">
                         <a href="../index.html" class="navbar-link">Página principal</a>
                     </li>
@@ -167,6 +168,14 @@
     <script>
         AOS.init();
     </script>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('open');
+        }
+    </script>
+    
 </body>
 </html>
 

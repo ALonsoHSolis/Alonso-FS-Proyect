@@ -20,6 +20,148 @@ body h1 {
   color: #1abc9c;
 }
 
+/* Media Queries para index.html */
+/* Dispositivos móviles hasta 768px */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+  }
+  nav ul.open {
+    transform: translateX(0);
+  }
+  nav ul li {
+    margin: 20px 0;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: white;
+  }
+  .navbar-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  #bienvenida_imagen_header {
+    height: 150px;
+  }
+  #Bienvenida_index h1 {
+    font-size: 24px;
+  }
+  #Bienvenida_index p {
+    font-size: 14px;
+  }
+  #SFE h2 {
+    font-size: 20px;
+  }
+  #SFE p {
+    font-size: 12px;
+  }
+  #services {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .service {
+    margin-bottom: 20px;
+  }
+  .service img {
+    height: auto;
+  }
+  .service_description h3 {
+    font-size: 18px;
+  }
+  .service_description p {
+    font-size: 12px;
+  }
+}
+/* Tablets entre 768px y 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li a {
+    font-size: 13px;
+  }
+  #bienvenida_imagen_header {
+    height: 220px;
+  }
+  #Bienvenida_index h1 {
+    font-size: 28px;
+  }
+  #Bienvenida_index p {
+    font-size: 15px;
+  }
+  #SFE h2 {
+    font-size: 24px;
+  }
+  #SFE p {
+    font-size: 14px;
+  }
+  #services {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+  .service {
+    margin-bottom: 20px;
+  }
+  .service img {
+    height: auto;
+  }
+  .service_description h3 {
+    font-size: 22px;
+  }
+  .service_description p {
+    font-size: 14px;
+  }
+}
+/* Escritorio desde 1025px */
+@media (min-width: 1025px) {
+  #Bienvenida_index h1 {
+    font-size: 32px;
+  }
+  #Bienvenida_index p {
+    font-size: 18px;
+  }
+  #SFE h2 {
+    font-size: 28px;
+  }
+  #SFE p {
+    font-size: 16px;
+  }
+  #services {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+  .service {
+    margin-bottom: 30px;
+  }
+  .service img {
+    height: auto;
+  }
+  .service_description h3 {
+    font-size: 24px;
+  }
+  .service_description p {
+    font-size: 16px;
+  }
+}
 nav ul {
   list-style: none;
   padding: 0;

@@ -260,7 +260,7 @@ header .navbar .navbar-container .navbar-menu .navbar-item .navbar-link:hover {
   margin: 0 auto;
   padding: 0 20px;
 }
-.footer .footer-container > div {
+.footer .footer-container div {
   flex: 1;
   margin: 20px;
   min-width: 250px;

@@ -1,5 +1,5 @@
 /* Index Specific Styles */
-#SFE {
+.sfe {
     padding: 20px 42px;
     background-color: #1abc9c;
     border-radius: 8px;
@@ -7,14 +7,14 @@
 }
 
 /* Presentación */
-.Presentacion {
+.presentacion {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
     color: #1abc9c; 
 }
 
-#services {
+.services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;

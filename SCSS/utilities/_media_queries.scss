@@ -47,23 +47,23 @@
         cursor: pointer;
     }
     
-    #bienvenida_imagen_header {
+    .bienvenida_imagen_header {
         height: 150px;
     }
 
-    #Bienvenida_index h1 {
+    .bienvenida_index h1 {
         font-size: 24px;
     }
 
-    #Bienvenida_index p {
+    .bienvenida_index p {
         font-size: 14px;
     }
 
-    #SFE h2 {
+    .sfe h2 {
         font-size: 20px;
     }
 
-    #SFE p {
+    .sfe p {
         font-size: 12px;
     }
 
@@ -95,27 +95,27 @@
         font-size: 13px;
     }
 
-    #bienvenida_imagen_header {
+    .bienvenida_imagen_header {
         height: 220px;
     }
 
-    #Bienvenida_index h1 {
+    .bienvenida_index h1 {
         font-size: 28px;
     }
 
-    #Bienvenida_index p {
+    .bienvenida_index p {
         font-size: 15px;
     }
 
-    #SFE h2 {
+    .sfe h2 {
         font-size: 24px;
     }
 
-    #SFE p {
+    .sfe p {
         font-size: 14px;
     }
 
-    #services {
+    .services {
         grid-template-columns: repeat(2, 1fr);
         padding: 15px;
     }
@@ -139,23 +139,23 @@
 
 /* Escritorio desde 1025px */
 @media (min-width: 1025px) {
-    #Bienvenida_index h1 {
+    .bienvenida_index h1 {
         font-size: 32px;
     }
 
-    #Bienvenida_index p {
+    .bienvenida_index p {
         font-size: 18px;
     }
 
-    #SFE h2 {
+    .sfe h2 {
         font-size: 28px;
     }
 
-    #SFE p {
+    .sfe p {
         font-size: 16px;
     }
 
-    #services {
+    .services {
         grid-template-columns: repeat(3, 1fr);
         padding: 20px;
     }

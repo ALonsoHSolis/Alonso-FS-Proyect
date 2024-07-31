@@ -20,15 +20,15 @@
       h2 {
         font-size: 24px;
         margin-bottom: 10px;
-        color: #1abc9c;
-        border-bottom: 2px solid #1abc9c;
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
         padding-bottom: 5px;
       }
   
       p {
         font-size: 16px;
         text-align: justify;
-        color: #d3d3d3;
+        color: $text-color;
         line-height: 1.6;
       }
   

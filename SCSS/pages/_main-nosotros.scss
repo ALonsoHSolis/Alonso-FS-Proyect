@@ -2,7 +2,7 @@
 .section-content {
     margin: 20px;
     padding: 20px;
-    background: #333;
+    background:$background-color;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
@@ -11,7 +11,7 @@
         margin: 10px;
         padding: 10px;
         font-size: 32px;
-        color: #1abc9c; /* Verde */
+        color: $primary-color;
     }
 
     p {
@@ -19,7 +19,7 @@
         padding: 10px;
         font-size: 16px;
         text-align: justify;
-        color: #d3d3d3;
+        color: $text-color;
     }
 
     img {
@@ -38,7 +38,7 @@
     gap: 20px;
 
     .valor {
-        background-color: #444;
+        background-color: $secondary-color;
         border-radius: 8px;
         padding: 20px;
         text-align: center;
@@ -47,14 +47,14 @@
         h3 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #1abc9c;
+            color: $primary-color;
         }
 
         p {
             font-size: 14px;
             margin-bottom: 10px;
             text-align: justify;
-            color: #d3d3d3;
+            color: $text-color;
         }
 
         img {

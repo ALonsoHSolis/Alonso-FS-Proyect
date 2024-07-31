@@ -1,6 +1,6 @@
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: $background-color;
+    color: $white-color;
     padding: 40px 0;
     position: relative;
     bottom: 0;
@@ -24,8 +24,8 @@
     h3 {
       font-size: 18px;
       margin-bottom: 15px;
-      color: #1abc9c;
-      border-bottom: 2px solid #1abc9c;
+      color: $primary-color;
+      border-bottom: 2px solid $primary-color;
       padding-bottom: 5px;
     }
   
@@ -35,7 +35,7 @@
     }
   
     a {
-      color: #1abc9c;
+      color: $primary-color;
       text-decoration: none;
   
       &:hover {
@@ -55,7 +55,7 @@
     .footer-bottom {
       text-align: center;
       padding: 20px 0;
-      border-top: 1px solid #444;
+      border-top: 1px solid $background-color;
       margin-top: 20px;
   
       p {

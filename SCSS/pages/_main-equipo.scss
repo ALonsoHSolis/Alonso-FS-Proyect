@@ -6,7 +6,7 @@
     padding: 20px;
 
     .socio {
-        background-color: #444;
+        background-color: $secondary-color;
         border-radius: 8px;
         padding: 20px;
         display: flex;
@@ -27,13 +27,13 @@
 
             h2 {
                 font-size: 24px;
-                color: #1abc9c;
+                color: $primary-color;
                 margin-bottom: 10px;
             }
 
             p {
                 font-size: 16px;
-                color: #d3d3d3;
+                color: $text-color;
                 text-align: justify;
             }
         }

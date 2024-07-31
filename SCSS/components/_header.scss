@@ -1,6 +1,6 @@
 header {
   background: #000;
-  color: #fff;
+  color: $white-color;
   padding: 0;
 
   .navbar {
@@ -23,7 +23,7 @@ header {
         padding: 10px 0;
 
         a {
-          color: #1abc9c;
+          color: $primary-color;
           text-decoration: none;
         }
       }
@@ -38,13 +38,13 @@ header {
           margin: 0 15px;
 
           .navbar-link {
-            color: #fff;
+            color: $white-color;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s;
 
             &:hover {
-              color: #1abc9c;
+              color: $primary-color;
             }
           }
         }

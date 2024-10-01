@@ -43,7 +43,7 @@
             <img src="./assets/header.jpg" alt="Imagen de bienvenida" class="imagen_header" data-aos="fade-down">
         </section>
     
-        <section class= "bienvenida_index" data-aos="fade-up">
+        <section class="bienvenida_index" data-aos="fade-up">
             <div>
                 <h1>AH-RS Contadores & Auditores</h1>
             </div>
@@ -76,7 +76,7 @@
                     <p>Nuestros servicios y asesorías tributarias están diseñados para ayudarte a navegar el complejo panorama fiscal. Nos encargamos de la planificación y optimización fiscal, la preparación y presentación de declaraciones de impuestos, y la representación ante autoridades fiscales. Te ayudamos a maximizar tus beneficios fiscales mientras aseguras el cumplimiento con las regulaciones vigentes, reduciendo así el riesgo de sanciones y mejorando tu eficiencia fiscal.</p>
                 </div>
                 <div class="service_image">
-                    <img src="assets/header_serv_tributarios.jfif" alt="Servicios y asesorias tributarios ">
+                    <img src="assets/header_serv_tributarios.jfif" alt="Servicios y asesorias tributarios">
                 </div>
             </div>
     
@@ -90,9 +90,38 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    
+                <!-- Pregunta inicial -->
+        <section id="pregunta-suscripcion">
+            <h2>¿Te gustaría suscribirte?</h2>
+            <button onclick="manejarRespuestaSuscripcion('si')">Sí</button>
+            <button onclick="manejarRespuestaSuscripcion('no')">No</button>
+        </section>
+
+        <!-- Simulador de suscripciones -->
+        <section id="simulador">
+            <h2>Simulador de Suscripciones</h2>
+            <p>Seleccione el tipo de servicio que desea contratar:</p>
+            <div id="planes"></div>
+            
+            <label for="meses">¿Por cuántos meses deseas suscribirte?</label>
+            <input type="number" id="meses" placeholder="0" min="1">
+            
+            <button id="suscribirseBtn">Suscribirse</button>
+            
+            <p id="mensaje-error" style="color: red;"></p>
+            <h2>Resumen de su suscripción</h2>
+            <p id="resumen"></p>
+        </section>
+
+        <!-- Mensaje de agradecimiento si el usuario no quiere suscribirse -->
+        <section id="mensaje-gracias">
+            <h2>¡Gracias por visitar nuestra página!</h2>
+        </section>
+
+        
+
+    </main>
 
     <footer class="footer">
         <div class="footer-container" data-aos="fade-down">
@@ -131,6 +160,6 @@
         }
     </script>
 
-    <script src="./preEntrega1.js"></script>  <!--Conexion a libro de JavaScript-->
+    <script src="./preEntrega2.js"></script>  <!-- Conexión al script de JavaScript actualizado -->
 </body>
 </html>

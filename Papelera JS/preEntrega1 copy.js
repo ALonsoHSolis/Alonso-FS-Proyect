@@ -11,18 +11,22 @@ const saludoInicial = alert("Estimado cliente, le damos la bienvenida a AH-DR Au
 
 // Función para manejar la suscripción
 function quieroSuscribirme() {
-    // Preguntar al cliente si se quiere suscribir
-    const empezarSuscripcion = prompt("¿Te gustaría suscribirte? (1: Sí, 2: No)");
+    let empezarSuscripcion;
+
+    // Validar el ingreso del usuario hasta que sea 1 o 2
+    do {
+        empezarSuscripcion = prompt("¿Te gustaría suscribirte? (1: Sí, 2: No)");
+    } while (empezarSuscripcion !== "1" && empezarSuscripcion !== "2");
 
     if (empezarSuscripcion === "1") {
-        let mensajePlanes = "¿Qué tipo de servicio le gustaría contratar? A continuación, le presentamos nuestras tarifas: \n";
+        let mensajePlanes = "¿Qué tipo de servicio le gustaría contratar? A continuación, le presentamos nuestras tarifas: \n"; 
         
         // Generar la lista de planes con su precio
         for (let i = 0; i < planes.length; i++) {
             mensajePlanes += `${i + 1}: ${planes[i].nombre} - $${planes[i].precio.toLocaleString()} CLP\n`;
         }
 
-        // Mostrar los planes y pedir que el cliente elija uno
+        // Mostrar los planes y pedir que el cliente elija uno 
         const eleccionPlan = prompt(mensajePlanes + "Por favor, elige el número del plan que te interesa:");
 
         const planSeleccionado = planes[eleccionPlan - 1];
@@ -38,4 +42,3 @@ function quieroSuscribirme() {
 }
 
 quieroSuscribirme();
-

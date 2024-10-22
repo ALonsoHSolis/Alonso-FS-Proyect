@@ -66,3 +66,102 @@
     
 }
 
+#pregunta-suscripcion {
+    background-color: $secondary-color;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  
+    h2 {
+      font-size: 28px;
+      color: $primary-color;
+    }
+  
+    button {
+      background-color: $primary-color;
+      color: $white-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+  
+  #simulador {
+    background-color: $secondary-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+  
+    h2 {
+      font-size: 28px;
+      color: $primary-color;
+    }
+  
+    p {
+      font-size: 16px;
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+  
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid lighten($primary-color, 30%);
+      font-size: 16px;
+      margin-bottom: 20px;
+      width: 100px;
+    }
+  
+    #suscribirseBtn {
+      background-color: $primary-color;
+      color: $white-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  
+    #mensaje-error {
+      font-size: 14px;
+      color: red;
+      margin-top: 10px;
+    }
+  
+    #resumen {
+      font-size: 18px;
+      color: $primary-color;
+      margin-top: 20px;
+    }
+  }
+  
+  #mensaje-gracias {
+    background-color: $secondary-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+  
+    h2 {
+      font-size: 28px;
+      color: $primary-color;
+    }
+  }

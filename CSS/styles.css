@@ -362,6 +362,95 @@ header .navbar .navbar-container .navbar-menu .navbar-item .navbar-link:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+#pregunta-suscripcion {
+  background-color: #444;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+#pregunta-suscripcion h2 {
+  font-size: 28px;
+  color: #1abc9c;
+}
+#pregunta-suscripcion button {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#pregunta-suscripcion button:hover {
+  background-color: #148f77;
+}
+
+#simulador {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  text-align: center;
+}
+#simulador h2 {
+  font-size: 28px;
+  color: #1abc9c;
+}
+#simulador p {
+  font-size: 16px;
+  color: #d3d3d3;
+  margin-bottom: 20px;
+}
+#simulador input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #81eed8;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100px;
+}
+#simulador #suscribirseBtn {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#simulador #suscribirseBtn:hover {
+  background-color: #148f77;
+}
+#simulador #mensaje-error {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}
+#simulador #resumen {
+  font-size: 18px;
+  color: #1abc9c;
+  margin-top: 20px;
+}
+
+#mensaje-gracias {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  text-align: center;
+}
+#mensaje-gracias h2 {
+  font-size: 28px;
+  color: #1abc9c;
+}
+
 /* Sección común */
 .section-content {
   margin: 20px;

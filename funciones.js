@@ -1,47 +1,114 @@
-// Planes de suscripción
-const planes = [
-    { nombre: 'Básico', precio: 10000 },
-    { nombre: 'Profesional', precio: 20000 },
-    { nombre: 'Empresarial', precio: 35000 }
-];
+// Clase para manejar los planes de suscripción
+class Plan {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 
-// Función para seleccionar plan
-function seleccionarPlan() {
-    let seleccion = prompt("Seleccione su plan (1: Básico, 2: Profesional, 3: Empresarial):");
-    if (seleccion === "1") {
-        return planes[0];
-    } else if (seleccion === "2") {
-        return planes[1];
-    } else if (seleccion === "3") {
-        return planes[2];
+    // Método para mostrar el plan en formato de texto
+    descripcion() {
+        return `${this.nombre} - $${this.precio.toLocaleString()} CLP/mes`;
+    }
+}
+
+// Función para obtener los planes desde un archivo JSON usando fetch
+function obtenerPlanes() {
+    return fetch('./assets/planes.json')  // Asegúrate de que la ruta sea correcta
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+        .catch(error => console.error('Error al cargar los planes:', error));
+}
+
+// Función para renderizar los planes en el DOM
+function renderizarPlanes(planes) {
+    const contenedorPlanes = document.getElementById('planes');
+    contenedorPlanes.innerHTML = ''; // Limpiar antes de renderizar
+
+    planes.forEach((plan, index) => {
+        const planDiv = document.createElement('div');
+        planDiv.innerHTML = `
+            <input type="radio" name="plan" value="${index}" id="plan${index}">
+            <label for="plan${index}">${plan.nombre} - $${plan.precio.toLocaleString()} CLP/mes</label>
+        `;
+        contenedorPlanes.appendChild(planDiv);
+    });
+}
+
+// Función para guardar la suscripción en localStorage
+function guardarSuscripcion(plan) {
+    localStorage.setItem('suscripcion', JSON.stringify(plan));
+}
+
+// Función para recuperar la suscripción desde localStorage
+function obtenerSuscripcion() {
+    const suscripcion = localStorage.getItem('suscripcion');
+    return suscripcion ? JSON.parse(suscripcion) : null;
+}
+
+// Función para manejar la suscripción del usuario
+function suscribirse() {
+    const seleccion = document.querySelector('input[name="plan"]:checked');
+    const meses = document.getElementById('meses').value;
+
+    if (seleccion && meses > 0) {
+        const planSeleccionado = planes[seleccion.value];
+        guardarSuscripcion(planSeleccionado);
+
+        const total = planSeleccionado.precio * meses;
+
+        // Mostrar resumen usando SweetAlert
+        Swal.fire({
+            title: '¡Suscripción exitosa!',
+            text: `Te has suscrito al plan: ${planSeleccionado.nombre} por ${meses} mes(es), con un total de $${total.toLocaleString()} CLP.`,
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
     } else {
-        alert("Selección no válida. Inténtelo de nuevo.");
-        return seleccionarPlan();
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor selecciona un plan y especifica la cantidad de meses.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
     }
 }
 
-// Función para calcular el costo total
-function calcularCosto(plan, meses) {
-    let total = 0;
-    for (let i = 0; i < meses; i++) {
-        total += plan.precio;
-    }
-    return total;
+// Función para mostrar la pregunta inicial
+function mostrarPreguntaSuscripcion() {
+    const seccionPregunta = document.getElementById('pregunta-suscripcion');
+    seccionPregunta.style.display = 'block';
 }
 
-// Función principal para iniciar el simulador
-function iniciarSimulador() {
-    let planSeleccionado = seleccionarPlan();
-    let meses = parseInt(prompt("¿Por cuántos meses desea suscribirse?"));
-    if (isNaN(meses) || meses <= 0) {
-        alert("Debe ingresar un número válido de meses.");
-        iniciarSimulador();
+// Función para manejar la respuesta del usuario a la pregunta inicial
+function manejarRespuestaSuscripcion(respuesta) {
+    const seccionPregunta = document.getElementById('pregunta-suscripcion');
+    const simulador = document.getElementById('simulador');
+    const mensajeGracias = document.getElementById('mensaje-gracias');
+
+    if (respuesta === 'si') {
+        // Ocultar la pregunta y mostrar el simulador
+        seccionPregunta.style.display = 'none';
+        simulador.style.display = 'block';
     } else {
-        let costoTotal = calcularCosto(planSeleccionado, meses);
-        alert(`Ha seleccionado el plan ${planSeleccionado.nombre}. El costo total por ${meses} meses es $${costoTotal}`);
+        // Ocultar la pregunta y mostrar el mensaje de agradecimiento
+        seccionPregunta.style.display = 'none';
+        mensajeGracias.style.display = 'block';
     }
 }
 
-// Iniciar el simulador automáticamente
-iniciarSimulador();
+// Evento para el botón de suscripción
+document.getElementById('suscribirseBtn').addEventListener('click', suscribirse);
 
+// Llamar a la función para cargar los planes al iniciar la página
+let planes = [];
+obtenerPlanes().then(data => {
+    planes = data.map(plan => new Plan(plan.nombre, plan.precio));
+    renderizarPlanes(planes);
+});
+
+// Ocultar el simulador y mostrar la pregunta inicial
+document.getElementById('simulador').style.display = 'none';
+document.getElementById('mensaje-gracias').style.display = 'none';
+mostrarPreguntaSuscripcion();
